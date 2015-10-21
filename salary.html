@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script  type="text/javascript">
+
+function compute()
+{
+
+var mgender = prompt("What is your gender M or F :", "M");
+var gsalary = prompt("What is your gross income: ",5000);
+
+var depend = prompt("How many dependants do you have ? :", 2);
+
+//var mydeduct =  (gsalary * 0.18) + ( gsalary * 0.07) + ( gsalary * 0.09) + 250;
+
+	if (mgender == 'M')
+	{
+	if (depend > 2)
+	    {
+		var mydeduct = (gsalary * 0.19) + ( gsalary * 0.07) + ( gsalary * 0.09) + 250;
+		var fsalary = gsalary - mydeduct;
+		return fsalary;
+		}
+		else if (depend <= 2)
+		{
+		var mydeduct = (gsalary * 0.18) + ( gsalary * 0.07) + ( gsalary * 0.09) + 250;
+		var fsalary = gsalary - mydeduct;
+		return fsalary;
+	    }
+	}
+	else if (mgender == 'F')
+	{
+	if (depend > 2)
+	     {
+		 var mydeduct = (gsalary * 0.15) + (gsalary * 0.07) + (gsalary * 0.09) + 250;
+          var fsalary = gsalary - mydeduct;
+		  return fsalary;
+         }
+	else if (depend <= 2)
+	    {
+		var mydeduct = (gsalary * 0.16) + ( gsalary * 0.07) + ( gsalary * 0.09) + 250;
+		var fsalary = gsalary - mydeduct;
+		return fsalary;
+        }
+
+    }
+}
+
+document.write("<table border=1 bgcolor=green align=center>");
+document.write("<th align=center bgcolor = cyan >");
+document.write("<h2>Salary Slip </h2>");
+document.write("</th>");
+document.write("<tr> ");
+document.write("<td>");
+document.write("Additional: " + "$ " + "250" );
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr> ");
+document.write("<td>");
+document.write("Income Tax: " + "$ " + "0.18" );
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr> ");
+document.write("<td>");
+document.write("EI: " + "$ " + "0.07" );
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write( "CPP: " + "$ " + "0.09" );
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write("Final Salary Is: " + "$ " + compute());
+document.write("</tr>");
+document.write("</td>");
+document.write("<tr>");
+document.write("<td>");
+document.write("Gross salary: " + "$ " +  gd);
+document.write("</tr>");
+document.write("</td>");
+document.write("</table>");
+
+
+</script>
+
+<!--<center>
+<form name=paycheck>
+<table border=1>
+<tr>
+<td bgcolor="#c0c0c0" align=right><b>Gross Salary:</b></td>
+<td><input type=text name=gsalary size=5></td>
+<td bgcolor="#c0c0c0" align=right>Gender</b></td>
+<td><input type=text name=mgender  size=5></td>
+</tr>
+<tr>
+<td align=right>CPP:</td>
+<td><input type=text value=0.09 size=5></td>
+<td align=right>Federal taxes:</td>
+<td><input type=text value=0.18 size=5></td>
+</tr>
+<tr>
+<td colspan=2>   </td>
+<td align=right><p>EI</td>
+<td><input type=text  value=0.07 size=5> </td>
+</tr>
+<tr>
+<td colspan=2>   </td>
+<td align=right>Additional </td>
+<td><input type=text  value=250 size=5> </td>
+</tr>
+<tr>
+<td colspan=2>   </td>
+<td align=right bgcolor="#ffff80"><b>Your Paycheck:</b></td>
+<td><input type=text name=fsalary size=5></td>
+</tr>
+<tr>
+<td colspan=4 align=center><input type=button value="Calculate" onClick="(compute()">
+</td>
+</tr>
+</table>
+</form>
+</center>-->
+
+
+</body>
+
+</html>
